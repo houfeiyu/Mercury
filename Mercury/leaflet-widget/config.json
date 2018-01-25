@@ -1,0 +1,548 @@
+{
+    "map": {
+        "zoom": 13,
+        "center": { "x": 117.240601, "y": 31.827107 },
+        "minZoom": 3,
+        "maxZoom": 18,
+        "centerAutoLevel": 15,
+        "controls": [
+            { "type": "scale" },
+            { "type": "location", "showlevel": false },
+            { "type": "tool", "item": [ "home", "location", "fullscreen" ], "position": "bottomright" },
+            { "type": "zoom", "position": "bottomright" },
+            { "type": "layers", "position": "bottomleft", "visible": false }
+        ],
+        "basemaps": [
+            {
+                "id": 10,
+                "name": "地图底图",
+                "type": "group"
+            },
+            {
+                "pid": 10,
+                "name": "高德地图",
+                "type": "www_gaode",
+                "layer": "vec",
+                "icon": "bingmap.png",
+                "visible": true,
+                "crs": "gcj"
+            },
+            {
+                "pid": 10,
+                "name": "高德卫星",
+                "type": "www_gaode",
+                "layer": "img",
+                "icon": "bingimage.png",
+                "crs": "gcj"
+            },
+            {
+                "pid": 10,
+                "name": "谷歌地图",
+                "type": "www_google",
+                "layer": "vec",
+                "icon": "googlemap.png",
+                "crs": "gcj"
+            },
+            {
+                "pid": 10,
+                "name": "谷歌卫星",
+                "type": "www_google",
+                "layer": "img",
+                "icon": "googleimage.png",
+                "crs": "gcj"
+            },
+            {
+                "pid": 10,
+                "name": "天地图电子",
+                "type": "www_tdt",
+                "layer": "vec",
+                "crs": "4326",
+                "icon": "tianditumap.png"
+            },
+            {
+                "pid": 10,
+                "name": "天地图卫星",
+                "type": "www_tdt",
+                "layer": "img",
+                "icon": "tiandituimage.png",
+                "crs": "4326"
+            },
+            {
+                "pid": 10,
+                "name": "百度地图",
+                "type": "www_baidu",
+                "layer": "vec",
+                "icon": "baidumap.png",
+                "crs": "baidu"
+            },
+            {
+                "pid": 10,
+                "name": "百度卫星",
+                "type": "www_baidu",
+                "layer": "img",
+                "icon": "baiduimage.png",
+                "crs": "baidu"
+            },
+            {
+                "pid": 10,
+                "name": "OSM地图",
+                "type": "www_osm",
+                "icon": "osm.png"
+            },
+            {
+                "pid": 10,
+                "name": "深色午夜图",
+                "type": "www_baidu",
+                "layer": "custom",
+                "customid": "midnight",
+                "icon": "bd-c-midnight.png",
+                "crs": "baidu"
+            },
+            {
+                "pid": 10,
+                "name": "灰色图",
+                "type": "www_baidu",
+                "layer": "custom",
+                "customid": "grayscale",
+                "icon": "bd-c-grayscale.png",
+                "crs": "baidu"
+            },
+            {
+                "pid": 10,
+                "name": "草绿色图",
+                "type": "www_baidu",
+                "layer": "custom",
+                "customid": "grassgreen",
+                "icon": "bd-c-grassgreen.png",
+                "crs": "baidu"
+            }
+        ],
+        "operationallayers": [
+            {
+                "id": 40,
+                "name": "WMS服务",
+                "type": "group"
+            },
+            {
+                "pid": 40,
+                "name": "行政区划",
+                "type": "wms",
+                "url": "http://gisserver.tianditu.com/TDTService/region/wms",
+                "layers": "030100",
+                "transparent": true,
+                "format": "image/png"
+            },
+            {
+                "pid": 40,
+                "name": "地表覆盖",
+                "type": "wms",
+                "url": "http://218.244.250.80:8080/erdas-apollo/coverage/CGLC?",
+                "layers": "cglc30_2010_0",
+                "style": "forest",
+                "transparent": true,
+                "format": "image/png"
+            },
+
+            {
+                "id": 50,
+                "name": "实时路况(仅限相同坐标系有效)",
+                "type": "group"
+            },
+            {
+                "pid": 50,
+                "name": "高德实时路况",
+                "type": "www_gaode",
+                "layer": "time"
+            },
+            {
+                "pid": 50,
+                "name": "百度实时路况",
+                "type": "www_baidu",
+                "layer": "time",
+                "crs": "baidu"
+            },
+            { "name": "经纬网", "type": "custom_jww" }
+        ]
+
+    },
+
+    "widget": {
+        "debugger": false,
+        "version": "20180118",
+        "defaultOptions": {
+            "windowOptions": {
+                "position": {
+                    "top": 50,
+                    "right": 10
+                },
+                "maxmin": false,
+                "resize": true
+            },
+            "autoDisable": true,
+            "disableOhter": true
+        },
+        "widgetsAtStart": [
+            {
+                "name": "右上角工具栏",
+                "uri": "widgets/toolBar/widget.js"
+            },
+            {
+                "name": "百度POI查询",
+                "uri": "widgets/queryBaiduPOI/widget.js"
+            },
+            {
+                "name": "路线规划",
+                "uri": "widgets/queryGaodeRoute/widget.js"
+            }
+        ],
+        "widgets": [
+
+            {
+                "name": "模板",
+                "type": "group",
+                "children": [
+                    {
+                        "name": "iframe弹窗模板",
+                        "uri": "widgets/_example/widget.js",
+                        "windowOptions": {
+                            "width": 300,
+                            "height": 400,
+                            "position": {
+                                "top": 10,
+                                "right": 10
+                            },
+                            "maxmin": true,
+                            "resize": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "name": "div弹窗模板",
+                        "uri": "widgets/_example_divwin/widget.js"
+                    },
+                    {
+                        "name": "append模板",
+                        "uri": "widgets/_example_append/widget.js"
+                    }
+                ]
+            },
+            {
+                "name": "地图工具",
+                "type": "group",
+                "children": [
+                    {
+                        "id": "manageBasemaps",
+                        "name": "地图切换",
+                        "uri": "widgets/manageBasemaps/widget.js",
+                        "autoDisable": false,
+                        "disableOhter": false
+                    },
+                    {
+                        "name": "图层控制",
+                        "uri": "widgets/manageLayers/widget.js",
+                        "autoDisable": false,
+                        "disableOhter": false
+                    },
+                    {
+                        "name": "坐标定位",
+                        "uri": "widgets/centerXY/widget.js"
+                    },
+                    {
+                        "name": "地区导航",
+                        "uri": "widgets/navXZQH/widget.js"
+                    },
+                    {
+                        "name": "测量",
+                        "uri": "widgets/measure/widget.js"
+                    },
+                    {
+                        "name": "标记",
+                        "uri": "widgets/addmarker/widget.js"
+                    },
+                    {
+                        "name": "书签",
+                        "uri": "widgets/bookmark/widget.js"
+                    },
+                    {
+                        "name": "双屏对比",
+                        "uri": "widgets/mapCompare/widget.js",
+                        "autoDisable": false,
+                        "disableOhter": false
+                    },
+                    {
+                        "name": "卷帘对比",
+                        "uri": "widgets/mapSwipe/widget.js",
+                        "autoDisable": false,
+                        "disableOhter": false
+                    },
+                    {
+                        "name": "标绘",
+                        "uri": "widgets/plot/widget.js",
+                        "windowOptions": {
+                            "position": {
+                                "top": 50,
+                                "right": 10,
+                                "bottom": 10
+                            }
+                        }
+                    },
+                    {
+                        "name": "分享当前地图位置",
+                        "uri": "widgets/shareUrl/widget.js",
+                        "windowOptions": {
+                            "position": "t"
+                        }
+                    },
+                    {
+                        "name": "打印",
+                        "uri": "widgets/print/widget.js",
+                        "autoDisable": false,
+                        "disableOhter": false
+                    },
+                    {
+                        "name": "街景",
+                        "uri": "widgets/streetscape/widget.js"
+                    }
+                ]
+            },
+            {
+                "name": "Echarts态势",
+                "type": "group",
+                "children": [
+                    {
+                        "name": "饼形图标记",
+                        "uri": "widgetsTS/showEcharts/marker1.js"
+                    },
+                    {
+                        "name": "折线图标记",
+                        "uri": "widgetsTS/showEcharts/marker2.js"
+                    },
+
+                    {
+                        "name": "全省经济指标",
+                        "uri": "widgetsTS/showEcharts/sandian1.js"
+                    },
+                    {
+                        "name": "城市空气质量",
+                        "uri": "widgetsTS/showEcharts/sandian2.js"
+                    },
+                    {
+                        "name": "散点图态势",
+                        "uri": "widgetsTS/showEcharts/sandian3.js"
+                    },
+                    {
+                        "name": "散点图微博签到",
+                        "uri": "widgetsTS/showEcharts/sandianWeibo.js"
+                    },
+
+                    {
+                        "name": "流出线",
+                        "uri": "widgetsTS/showEcharts/line_chu.js"
+                    },
+                    {
+                        "name": "流入线",
+                        "uri": "widgetsTS/showEcharts/line_ru.js"
+                    },
+                    {
+                        "name": "物流运输图",
+                        "uri": "widgetsTS/showEcharts/line1.js"
+                    },
+                    {
+                        "name": "人口迁徙图",
+                        "uri": "widgetsTS/showEcharts/line2.js"
+                    },
+                    {
+                        "name": "流向动态效果",
+                        "uri": "widgetsTS/showEcharts/line3.js"
+                    },
+                    {
+                        "name": "道路拥堵图",
+                        "uri": "widgetsTS/showEcharts/lineroad.js"
+                    },
+                    {
+                        "name": "公交路线热力图",
+                        "uri": "widgetsTS/showEcharts/lineroad2.js"
+                    },
+                    {
+                        "name": "铁路热力图Arc",
+                        "uri": "widgetsTS/showEcharts/lineroad3.js"
+                    }
+                ]
+            },
+            {
+                "name": "MapV态势",
+                "type": "group",
+                "children": [
+                    {
+                        "name": "蜂巢图",
+                        "uri": "widgetsTS/showMapV/gridHoneycomb.js"
+                    },
+                    {
+                        "name": "方格图",
+                        "uri": "widgetsTS/showMapV/gridPoint.js"
+                    },
+                    {
+                        "name": "微博",
+                        "uri": "widgetsTS/showMapV/pointWeibo.js"
+                    },
+                    {
+                        "name": "动态点",
+                        "uri": "widgetsTS/showMapV/pointTime.js"
+                    },
+                    {
+                        "name": "简单线",
+                        "uri": "widgetsTS/showMapV/polyline.js"
+                    },
+                    {
+                        "name": "强度线",
+                        "uri": "widgetsTS/showMapV/polylineIntensity.js"
+                    },
+                    {
+                        "name": "动态轨迹",
+                        "uri": "widgetsTS/showMapV/lineTime.js"
+                    },
+                    {
+                        "name": "强边界图",
+                        "uri": "widgetsTS/showMapV/lineForceEdgeBunding.js"
+                    },
+                    {
+                        "name": "迁徙图",
+                        "uri": "widgetsTS/showMapV/qianxi.js"
+                    },
+                    {
+                        "name": "大迁徙图",
+                        "uri": "widgetsTS/showMapV/qianxiTime.js"
+                    },
+                    {
+                        "name": "北京小区",
+                        "uri": "widgetsTS/showMapV/polygon.js"
+                    }
+                ]
+            },
+            {
+                "name": "ts态势",
+                "type": "group",
+                "children": [
+                    {
+                        "name": "全省情况",
+                        "uri": "widgetsTS/ts_showQyInfoSheng/widget.js"
+                    },
+                    {
+                        "name": "市州情况",
+                        "uri": "widgetsTS/ts_showQyInfo/widget.js?type=2",
+                        "data": "shi.json"
+                    },
+                    {
+                        "name": "区县情况",
+                        "uri": "widgetsTS/ts_showQyInfo/widget.js?type=3",
+                        "data": "xian.json"
+                    },
+                    {
+                        "name": "单项指标",
+                        "uri": "widgetsTS/ts_showPolyChartsOne/widget.js"
+                    },
+                    {
+                        "name": "多项指标",
+                        "uri": "widgetsTS/ts_showPolyCharts/widget.js"
+                    },
+                    {
+                        "name": "多项指标-无地图",
+                        "uri": "widgetsTS/ts_showPolyChartsNoMap/widget.js"
+                    },
+                    {
+                        "name": "相邻市州对比",
+                        "uri": "widgetsTS/ts_showQyInfoDB/widget.js?type=1",
+                        "data": "shi.json"
+                    },
+                    {
+                        "name": "相邻区县对比",
+                        "uri": "widgetsTS/ts_showQyInfoDB/widget.js?type=2",
+                        "data": "xian.json"
+                    },
+                    {
+                        "name": "比对汇总",
+                        "uri": "widgetsTS/ts_showDBHZ/widget.js",
+                        "windowOptions": {
+                            "position": {
+                                "left": 1,
+                                "right": 1,
+                                "top": 1,
+                                "bottom": 1
+                            }
+                        }
+                    },
+
+                    {
+                        "name": "大型洪水情况",
+                        "uri": "widgetsTS/ts_showView/widget5.js"
+                    },
+                    {
+                        "name": "主要城市水域",
+                        "uri": "widgetsTS/ts_showView/widget6.js"
+                    },
+
+                    {
+                        "name": "事故模拟",
+                        "uri": "widgetsTS/fx_sgmn/widget.js"
+                    }
+
+                ]
+            },
+            {
+                "name": "常用功能",
+                "type": "group",
+                "children": [
+
+                    {
+                        "name": "要素编辑",
+                        "uri": "widgetsTS/editFeature/widget.js"
+                    },
+                    {
+                        "name": "条件查询",
+                        "uri": "widgetsTS/queryByWhere/widget.js"
+                    },
+                    {
+                        "name": "企业查询",
+                        "uri": "widgetsTS/queryQy/widget.js",
+                        "windowOptions": {
+                            "position": {
+                                "top": 5,
+                                "right": 5,
+                                "bottom": 5
+                            }
+                        }
+                    },
+                    {
+                        "name": "ArcPOI查询",
+                        "uri": "widgetsTS/geosearch/widget.js"
+                    },
+
+                    {
+                        "name": "POI周边查询",
+                        "uri": "widgetsTS/queryBaiduPOICircle/widget.js",
+                        "windowOptions": {
+                            "position": {
+                                "top": 5,
+                                "right": 5,
+                                "bottom": 5
+                            }
+                        }
+                    },
+
+                    {
+                        "name": "热力图",
+                        "uri": "widgetsTS/showHeat/widget.js"
+                    }
+
+                ]
+            }
+
+
+
+        ]
+    }
+
+
+
+
+}

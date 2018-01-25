@@ -1,0 +1,236 @@
+﻿/*整个搜索控件*/
+.wholeSearchDiv{
+    position: absolute;
+    z-index: 1000;
+    left:10px;
+    top:20px;
+    width: 322px;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+}
+
+.searchInputBtnDiv{
+
+    left:10px;
+    top:20px;
+    /*height: 36px;*/
+    /*width:317px;*/
+
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+
+}
+
+
+
+
+
+
+
+
+
+
+.measurebtn{
+    position: absolute;
+    left:367px;
+    top:20px;
+    height: 36px;
+    width:38px;
+    box-shadow: 1px 2px 1px rgba(0,0,0,.15)
+
+}
+
+
+.measureCtrl{
+    position: absolute;
+    left:367px;
+    top:20px;
+    height: 36px;
+    width:155px;
+    background: #4286f5;;
+    box-shadow: 1px 2px 1px rgba(0,0,0,.15)
+
+}
+
+
+
+
+
+
+
+
+.searchValueDiv{
+    float: left;
+    background: #fff;
+    width: 275px;
+    line-height: 36px;
+    color: #888;
+    font-size: 14px;
+    height: 36px;
+    border: 1px solid #387cec;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 5px;
+    border-radius: 2px 0px 0px 2px;
+
+}
+
+
+.searchBtnDiv{
+     float: left;
+     width: 38px;
+     cursor: pointer;
+     background: url("../img/bmseabtn.png") center no-repeat #4286f5;
+     height: 36px;
+     line-height: 38px;
+     border-radius: 0px 2px 2px 0px;
+
+     border: 1px solid #387cec;
+ }
+.poilist{
+    padding-left: 20px;
+    width: 280px;
+    margin-top: 0px;
+}
+
+.searchResultPaneliframe{
+
+    left:10px;
+    top:51px;
+    /*width: 322px;*/
+    height: 535px;
+    margin-top: 10px;
+    background-color:transparent;
+    position: absolute;
+
+}
+
+.searchResultPanelDiv{
+    position: relative;
+    left:10px;
+    top:51px;
+    /*width: 322px;*/
+    height: 600px;
+    margin-top: 10px;
+    /*height: 0;*/
+    /* margin-left: 25px; */
+    background: #fff;
+    /*background-color: grey;*/
+    /*z-index: 3;*/
+
+    -moz-box-shadow: 0px 2px 2px 0px #c9c9c9;
+    -webkit-box-shadow: 0px 2px 2px 0px #c9c9c9;
+    overflow: hidden;
+    box-shadow: 2px 4px 4px rgba(0,0,0,.15);
+    /*border: 1px solid #387cec;*/
+}
+
+/*.tt2sea{*/
+/*height: 90%;*/
+/*width: 100%;*/
+/*}*/
+
+.titSearchPosition{
+    height: 45px;
+    line-height: 45px;
+    margin: 0 20px;
+    color: #666;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.fl {
+    float: left;
+}
+
+.red {
+    color: red;
+}
+
+.fr {
+    float: right;
+}
+
+
+.seakuangSearchPosition{
+    width: 100%;
+    height: 500px;
+    overflow-y: hidden;
+}
+
+.wholeSearchDiv .seatextSearchPosition {
+    /* height: 77px; */
+    margin: 0 20px;
+    padding-top: 13px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+
+.tt2pageSearchPosition{
+    width: 295px;
+    height: 25px;
+    margin: 0px auto;
+    padding-top: 10px;
+}
+
+.seatext {
+    /* height: 77px; */
+    /*margin: 0 20px;*/
+    padding-top: 13px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+.seatext:hover{
+    background-color: #EFF2F5;
+}
+
+.seatext .id {
+    width: 25px;
+    height: 32px;
+    line-height: 25px;
+    color: #fff;
+    text-align: center;
+    /*background: url("http://cstdtu.vhost4.cnvp.com.cn/Template/Default/PC/images/red.png") no-repeat;*/
+    background: url(../img/red.png) no-repeat;
+    margin-right: 15px;
+}
+
+.seatext ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+.seatext ul.ad {
+    width: 210px;
+    height: 100%;
+    font-size: 15px;
+    color: #666;
+
+}
+
+.seatext ul.ad li {
+    line-height: 23px;
+    font-size: 12px;
+
+
+}
+
+.seatext ul.ad em {
+    color: #4285f4;
+    font-family: "微软雅黑",Arial;
+    font-size: 12px;
+    line-height: 24px;
+    font-style: normal;
+}
+
+.clear {
+    clear: both;
+    line-height: 0px;
+    font-size: 0;
+    visibility: hidden;
+}

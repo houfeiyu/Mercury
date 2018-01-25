@@ -1,0 +1,46 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "微软雅黑"
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+    font-family: "微软雅黑", "Microsoft YaHei", Arial, Helvetica, sans-serif, "宋体"!important;
+    font-size: 13px;
+    background-color: transparent!important
+}
+
+a {
+    text-decoration: none
+}
+
+li,
+ul {
+    list-style: none
+}
+
+#centerDiv {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden
+}
+
+.map-control-bar {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 9999
+}
